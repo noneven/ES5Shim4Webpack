@@ -1,0 +1,28 @@
+{
+  "name": "es5shim4webpack",
+  "version": "0.0.1",
+  "description": "A webpack plugin to support webpack in ie678(ES5);",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "imChenJian",
+  "license": "MIT",
+  "main": "ES5Shim4Webpack.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "css-loader": "^0.21.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.12"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderwin/ES5Shim4Webpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coderwin/ES5Shim4Webpack/issues"
+  },
+  "homepage": "https://github.com/coderwin/ES5Shim4Webpack#readme"
+}
