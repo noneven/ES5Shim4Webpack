@@ -11,7 +11,7 @@
 ```javascript
 var replaceText = (function () {
 	var textStore = [];
-
+	
 	return function (index, replacement) {
 		textStore[index] = replacement;
 		return textStore.filter(Boolean).join('\n');
@@ -31,6 +31,7 @@ function addStyle(obj, options) {
 		} 
         //...
 	}
+}
 ```
 
 在不支持ES5的浏览器中，如果不对打包后的文件处理程序将跑不起来
