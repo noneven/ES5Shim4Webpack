@@ -64,3 +64,81 @@ module.exports = {
     ]
 }
 ```
+##效果
+```javascript
+/******/ (function(modules) { // webpackBootstrap
+/******/
+/******/    //bind
+/******/	if(!Function.prototype.bind){
+/******/  		Function.prototype.bind = function(){   
+/******/ 			var fn = this, 
+/******/ 			args = [].slice.call(arguments), 
+/******/ 			object = args.shift();   
+/******/ 			return function(){   
+/******/ 				return fn.apply(object,args.concat([].slice.call(arguments)));   
+/******/ 			}
+/******/ 		}
+/******/ 	}
+
+/******/	//filter
+/******/	if (!Array.prototype.filter){
+/******/		Array.prototype.filter = function(fun /*, thisp*/){
+/******/ 			var len = this.length;
+/******/ 			if (typeof fun != "function") throw new TypeError(); 
+/******/ 			var res = new Array();
+/******/ 			var thisp = arguments[1];
+/******/ 			for (var i = 0; i < len; i++){
+/******/ 				if (i in this){
+/******/ 					var val = this[i]; // in case fun mutates this
+/******/ 					if (fun.call(thisp, val, i, this)) res.push(val);
+/******/ 				}
+/******/ 			} 
+/******/ 			return res;
+/******/		}
+/******/	}
+
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ 
+```
