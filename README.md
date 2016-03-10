@@ -4,7 +4,7 @@
 
 ## run
 
-* install ==> npm install shim4webpack
+* install ==> npm install shim4webpack [@shim4webpack](https://www.npmjs.com/package/shim4webpack)
 
 ```javascript
 //import
