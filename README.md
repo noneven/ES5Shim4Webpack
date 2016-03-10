@@ -3,7 +3,9 @@
 解决webpack打包css/img到js后不支持ES5的问题
 
 ## run
+
 * install ==> npm install shim4webpack
+
 >var ES5Shim4Webpack = require("shim4webpack");
  plugins: [
 	new ES5Shim4Webpack({
