@@ -6,13 +6,17 @@
 
 * install ==> npm install shim4webpack
 
->var ES5Shim4Webpack = require("shim4webpack");
+```javascript
+//import
+var ES5Shim4Webpack = require("shim4webpack");
+// plugins add
 plugins: [
 	new ES5Shim4Webpack({
     		warnings: true, 
     		logContext: true
 	})
 ]
+```
 
 ##概述
 
