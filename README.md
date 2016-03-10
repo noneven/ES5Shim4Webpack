@@ -7,10 +7,10 @@
 * install ==> npm install shim4webpack
 
 >var ES5Shim4Webpack = require("shim4webpack");
- plugins: [
+plugins: [
 	new ES5Shim4Webpack({
-    	warnings: true, 
-    	logContext: true
+    		warnings: true, 
+    		logContext: true
 	})
 ]
 
